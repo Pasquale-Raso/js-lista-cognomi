@@ -6,7 +6,7 @@
 
 var cognomeUtente = prompt('digita il tuo cognome?')
 
-var listaCognomi = [ 'nero', 'verde', 'bianco', 'giallo', 'blu' ];
+var listaCognomi = [ 'nero', 'verde', 'bianco', 'giallo', 'blu', 'viola', 'arancio' ];
 
 listaCognomi.push(cognomeUtente.toLowerCase());
 
@@ -16,3 +16,9 @@ var a = listaCognomi.indexOf(cognomeUtente.toLowerCase());
 
 console.log(a);
 console.log(listaCognomi);
+
+var posizione = document.getElementById('posizione');
+posizione.innerHTML ='Il tuo cognome è stato inserito alla posizione n° ' + (a + 1) + ' della lista cognomi';
+
+var lista = document.getElementById('lista');
+lista.innerHTML = listaCognomi + ' ';
